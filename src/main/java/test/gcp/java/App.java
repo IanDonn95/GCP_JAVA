@@ -48,7 +48,9 @@ public final class App {
             while (true) {
                 try (Socket socket = server.accept()) {
                     Date today = new Date();
-                    String httpResponse = "HTTP/1.1 200 OK\r\n\r\n" + webpage; socket.getOutputStream().write(httpResponse.getBytes("UTF-8"));
+                    String httpResponse = "HTTP/1.1 200 OK\r\n\r\n" + webpage;
+                    socket.getOutputStream().write(httpResponse.getBytes("UTF-8"));
+                    socket.close();
                 }
 
             }
