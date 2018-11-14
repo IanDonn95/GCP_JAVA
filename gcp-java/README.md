@@ -1,0 +1,1 @@
+This is a simple application designed to run on Google Cloud Platform
